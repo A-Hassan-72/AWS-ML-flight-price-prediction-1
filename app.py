@@ -258,9 +258,8 @@ preprocessor = Pipeline(steps=[
 ])
 
 
-path = r"C:\Users\khans\OneDrive\Desktop\AWS Project\data\train.csv"
+train = pd.read_csv("train.csv")
 
-train = pd.read_csv(path)
 X_train = train.drop( columns=["price", "route"] )
 y_train = train.price.copy()
 
@@ -336,7 +335,7 @@ if st.button("Predict"):
     x_new_pre = saved_preprocessor.transform(x_new)
     
     try:
-        model_pipeline = joblib.load(r"flight_price_model.pkl")
+        model_pipeline = joblib.load("flight_price_model.pkl")
     except FileNotFoundError:
         st.error("Model file not found. Please ensure 'flight_price_model.pkl' is in the same directory.")
         st.stop()
