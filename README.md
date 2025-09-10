@@ -15,81 +15,87 @@ The goal of this project is to predict flight ticket prices based on various fac
 
 ##### What makes this project stand out:
 
--End-to-End Pipeline → Data ingestion, preprocessing, feature engineering, model training, deployment, and monitoring.
+- End-to-End Pipeline → Data ingestion, preprocessing, feature engineering, model training, deployment, and monitoring.
 
--Cloud-Native → Entire ML workflow managed with AWS SageMaker, S3, IAM, and EC2.
+- Cloud-Native → Entire ML workflow managed with AWS SageMaker, S3, IAM, and EC2.
 
 - Production Deployment → A Streamlit web app hosted on cloud, making predictions accessible via an intuitive interface.
 
--Scalable & Reproducible → Modularized code with pipelines (scikit-learn transformers, SageMaker processing jobs).
+- Scalable & Reproducible → Modularized code with pipelines (scikit-learn transformers, SageMaker processing jobs).
 
 ## Project Workflow
 
 #### Data Preparation
 
--Collected and cleaned dataset using Pandas & NumPy
+- Collected and cleaned dataset using Pandas & NumPy
 
--Handled missing values, outliers, categorical encoding, and feature scaling
+- Handled missing values, outliers, categorical encoding, and feature scaling
 
--Exploratory Data Analysis (EDA)
+- Exploratory Data Analysis (EDA)
 
--Conducted statistical analysis & hypothesis testing
+- Conducted statistical analysis & hypothesis testing
 
--Generated visualizations (univariate, bivariate, multivariate) to uncover insights
+- Generated visualizations (univariate, bivariate, multivariate) to uncover insights
 
 #### Feature Engineering & Preprocessing
 
--Created custom scikit-learn transformers for categorical and numerical features
+- Created custom scikit-learn transformers for categorical and numerical features
 
--Built preprocessing pipelines with Pipeline, FeatureUnion, ColumnTransformer
+- Built preprocessing pipelines with Pipeline, FeatureUnion, ColumnTransformer
 
--Model Training & Optimization
+- Model Training & Optimization
 
--Performed Feature Selection to identify the most predictive variables.
+- Performed Feature Selection to identify the most predictive variables.
 
--Trained  regression model (XGBoost) on AWS SageMaker
+- Trained  regression model (XGBoost) on AWS SageMaker
 
--Hyperparameter tuning using SageMaker’s built-in capabilities and also using Optuna in local environment
+- Hyperparameter tuning using SageMaker’s built-in capabilities and also using Optuna in local environment
 
 #### Model Deployment
 
--Saved model artifacts to S3
+- Saved model artifacts to S3
 
--Integrated with a Streamlit Web App for real-time predictions
+- Integrated with a Streamlit Web App for real-time predictions
 
 #### Web Application
 
--Built a Streamlit-based UI for interactive predictions
+- Built a Streamlit-based UI for interactive predictions
 
--Users can enter flight details (airline, date, duration, etc.) and instantly get price predictions
+- Users can enter flight details (airline, date, duration, etc.) and instantly get price predictions
 
--Deployed app on the cloud for public access
+- Deployed app on the cloud for public access
 
 ## Tech Stack
 
--Languages & Libraries: Python, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, XGBoost
+- Languages & Libraries: Python, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, XGBoost
 
--AWS Services: SageMaker, S3, EC2, IAM
+- AWS Services: SageMaker, S3, EC2, IAM
 
--MLOps Tools: SageMaker Pipelines, Hyperparameter Tuning Jobs and Optuna
+- MLOps Tools: SageMaker Pipelines, Hyperparameter Tuning Jobs and Optuna
 
-Deployment: Streamlit Web App
+- Deployment: Streamlit Web App
 
 ## Repository Structure
 
+## 📂 Repository Structure  
+
+```bash
 📦 flight-price-prediction
- ┣ 📂 data/                 # Raw and processed datasets
- ┣ 📂 notebooks/            # Jupyter notebooks for EDA & experimentation
- ┣ 📂 app.py                # Streamlit app & deployment scripts
- ┣ README.md                # Project documentation
- ┗ requirements.txt
+ ┣ 📂 data/           # Raw and processed datasets
+ ┣ 📂 notebooks/      # Jupyter notebooks for EDA & experimentation
+ ┣ 📜 app.py          # Streamlit app & deployment scripts
+ ┣ 📜 README.md       # Project documentation
+ ┗ 📜 requirements.txt
+```
 
 ### Getting Started
 
 To explore this project, simply clone the repository and follow the setup steps:
 
+```bash
 git clone https://github.com/A-Hassan-72/AWS-ML-flight-price-prediction-1.git
 cd AWS-ML-flight-price-prediction-1
+```
 
 
 ##### Install the dependencies:
