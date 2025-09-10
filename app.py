@@ -336,7 +336,7 @@ if st.button("Predict"):
     x_new_pre = saved_preprocessor.transform(x_new)
     
     try:
-        model_pipeline = joblib.load(r"C:\Users\khans\OneDrive\Desktop\AWS Project\notebooks\flight_price_model.pkl")
+        model_pipeline = joblib.load(r"flight_price_model.pkl")
     except FileNotFoundError:
         st.error("Model file not found. Please ensure 'flight_price_model.pkl' is in the same directory.")
         st.stop()
